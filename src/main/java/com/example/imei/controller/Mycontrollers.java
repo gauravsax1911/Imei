@@ -21,9 +21,12 @@ public class Mycontrollers {
      public String isVALID(@RequestBody entity num)
 	{
 		String x = num.imeinumber;
-		if(x.equals("") || x.length() < 15)
-			{ return "Insert a Valid Number";}
-		return isvalidimei(Long.parseLong(x));
+		
+		String ans = isvalidimei(Long.parseLong(x));
+				
+//		entity res = new entity(ans);
+//		return res;
+		return ans;
      
 	}
 	
